@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Html Example</title>
+    </head>
+    <body>
+    <fieldset>    
+        <legend align="center">
+            <fieldset>
+                <b>Registration Form</b>
+            </fieldset>
+        </legend>
+        <form action="welcome.html" method="post">
+        <table cellspacing="3" align="center">
+            
+            <tr>
+                <td>
+                    <label>Username</label>
+                </td>
+                <td>
+                    <input required type="text" id="username" name="username" placeholder="Enter Username">
+                </td>
+            </tr>
+            
+            <tr>
+                <td><label>Email</label></td>
+                <td>
+                    <input readonly value="andrew@gmail.com" required type="email" id="email" name="email" placeholder="Enter Email">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Password</label></td>
+                <td>
+                    <input required type="password" id="password" name="password" placeholder="Enter Password">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Contact</label></td>
+                <td>
+                    <input required type="text" maxlength="10" id="contact" name="contact" placeholder="Enter 10-digit Mobile Number">
+                </td>
+            </tr>
+            <tr>
+                <td><label>DOB</label></td>
+                <td>
+                    <input required type="date" id="date" name="date">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Select Gender</label></td>
+                <td>
+                    <input checked type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <!-- we need to write id inside for -->
+                    <input type="radio" value="female" id="female" name="gender">
+                    <label for="female">Female</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Select Hobbies</label></td>
+                <td>
+                    <input checked type="checkbox" id="cricket" name="cricket">
+                    <label for="cricket">Cricket</label>
+                    <input type="checkbox" id="hockey" name="hockey">
+                    <label for="hockey">Hockey</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Select Subject</label></td>
+                <td>
+                    <select required name="subject" id="subject">
+                    <!-- <select multiple name="subject" id="subject"> -->
+                        <option value="">Select Subject</option>
+                        <option value="c">C Language</option>
+                        <option value="java">Java</option>
+                        <option  selected value="html">HTML</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Address</label></td>
+                <td>
+                    <textarea required name="address" id="address" cols="21" rows="3" placeholder="Enter Address"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Register">
+                    <button type="reset">Reset</button>
+                </td>
+            </tr>
+        </table>
+        </form>
+    </fieldset>
+    </body>
+</html> 
+
+
