@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Css example</title>
+        <style>
+            li{
+                color:red;
+            }
+            li::marker{
+                color:blue;
+            }
+            li:hover{
+                color:black;
+            }
+            ul::first-letter{
+                font-size: 30px;
+            }
+
+            ul::before{
+                content: 'Un-ordered List _ ';
+                background-color: darkgreen;
+                color:black;
+            }
+            ul::after{
+                content: 'End of Un-ordered List';
+                background-color: darkred;
+                color:black;
+            }
+            a:active{
+                color:orange;
+            }
+            a{
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>Item 1</li>
+            <li><a href="">https://www.google.com</a></li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+        </ul>
+    </body>
+</html>
