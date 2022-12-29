@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+}
+#container
+{
+    height:auto;
+    width: 95%;
+    margin: auto;
+}
+#header{
+    height:70px;
+    background-color: white;
+}
+#header_logo
+{
+    height:70px;
+}
+/* #header_heading
+{
+    font-size: 32px;
+    font-family: candara;
+    position: absolute;
+    margin-top: 10px;
+} */
+
+#nav
+{
+    position: sticky;
+    top:0;
+    height:55px;
+    background-color: goldenrod;
+    z-index: 1;
+}
+#nav ul{
+    padding-top: 12px;
+    list-style: none;
+}
+#nav ul li{
+    display: inline;
+}
+#nav ul li a{
+    text-decoration: none;
+    color:white;
+    font-size: 22px;
+    margin-left: 72px;
+    font-family: candara;
+}
+#nav ul li a:hover{
+    color:black;
+}
+#nav ul li ul{
+    display: none;
+}
+#nav ul li:hover ul{
+    display: block;
+    position: absolute;
+    width: 100px;
+    background-color: goldenrod;
+    margin-left: 450px;
+}
+#nav ul li:hover ul li{
+    margin-left: -80px;
+    line-height: 30px;
+}
+#image{
+    height: 440px;
+}
+#banner{
+    height:440px;
+    width: 100%;
+}
+#mqdemo{
+    background-color: whitesmoke;
+    height: 30px;
+    padding: 10px;
+    font-size: 22px;
+}
+#about{
+    height: 480px;
+    padding:50px;
+}
+#head{
+    font-weight: bold;
+    font-size: 32px;
+    font-family: candara;
+}
+#about1
+{
+    height: 350px;
+    width: 350px;
+    margin: 20px;
+    margin-top: 60px;
+    float:left;
+}
+#about_image{
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+}
+#about2
+{
+    height: 300px;
+    width: 620px;
+    margin: 20px;
+    margin-top: 50px;
+    float:left;
+    font-size: 20px;
+    font-family: candara;
+    padding: 20px;
+    text-align: justify;
+}
+#contact
+{
+    height: 400px;
+    padding:50px;
+    background-color: whitesmoke;
+}
+#contact1{
+    height:340px;
+    width: 400px;
+    margin: 7px;
+    margin-top: 30px;
+    float:left;
+}
+iframe{
+    height:340px;
+    width: 400px;
+}
+#contact2{
+    padding: 15px;
+    height:310px;
+    width: 170px;
+    margin: 7px;
+    margin-top: 30px;
+    float:left;
+}
+#contact3{
+    padding: 15px;
+    height:310px;
+    width: 170px;
+    margin: 7px;
+    margin-top: 30px;
+    float:left;
+}
+#contact4{
+    padding: 15px;
+    height:310px;
+    width: 210px;
+    margin: 7px;
+    margin-top: 30px;
+    float:left;
+}
+#contact_head{
+    font-family: candara;
+}
+#sidelinks{
+    padding-top: 15px;
+    line-height: 35px;
+    font-size: 22px;
+    font-family: candara;
+}
+
+#side{
+    padding: 2px;
+    font-size: 18px;
+    font-family: candara;
+}
+#footer{
+    height: 30px;
+    padding: 10px;
+    font-size: 20px;
+    font-family: candara;
+    background-color: goldenrod;
+    color: black;
+}
+#loginform
+{
+    margin: auto;
+    margin-top:60px;
+    margin-bottom:60px;
+    height: 300px;
+    width: 400px;
+    background-color: whitesmoke;
+}
+#block_login{
+    height:50px;
+    width: 49.5%;
+    font-size: 20px;
+    font-family: candara;
+    border:0px;
+}
+#inside_box{
+     height: 170px;
+     padding: 40px;
+}
+#input_login{
+    height:40px;
+    width: 310px;
+    margin: 5px;
+    font-size: 17px;
+    font-family: candara;
+    text-align: center;
+    border:0px;
+}
+#button_login{
+    height:40px;
+    width: 317px;
+    margin: 5px;
+    border:0px;
+    font-size: 17px;
+    color:white;
+    background-color: goldenrod;
+    font-family: candara;
+}
+#rem{
+    height:18px;
+    width:18px;
+    margin: 5px;
+    accent-color: goldenrod;
+}
+#rem:checked:before{
+    color: white;
+}
+#rem_content{
+    font-size: 17px;
+    font-family: candara;
+}
+#input_login:focus{
+    outline: 2px solid goldenrod;
+}
