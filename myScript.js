@@ -1,0 +1,3 @@
+    document.write('Welcome to Javascript<br>');
+    document.write("<span style='color:red'>Welcome to Javascript</span><br>");
+    document.write("Welcome to Javascript<br>");
