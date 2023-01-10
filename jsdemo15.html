@@ -1,0 +1,18 @@
+<script>
+    
+    var arr=[1,2,3,4,5];
+    document.write("Elements : "+arr);
+
+    document.write("<br>Array elements are : <br>");
+    for(var index in arr) // works on indexing
+    {
+        document.write("arr["+index+"] : "+arr[index]+"<br>");
+    }
+
+    document.write("<br>Array elements are : <br>");
+    for(var value of arr) // works on value
+    {
+        document.write("value : "+value+"<br>");
+    }
+
+</script>
