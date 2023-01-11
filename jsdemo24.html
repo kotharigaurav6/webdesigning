@@ -1,0 +1,27 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Javascript</title>
+        <script>
+            function myFun()
+            {
+                alert("Button Clicked");
+            }
+        </script>
+ 
+</head>
+    <body>
+        <button onclick="alert('Button Clicked')">Button</button>
+        <button ondblclick="alert('Button Clicked')">Button</button>
+        <button onclick="myFun()">Button</button>
+        <button id="myBtn">Button</button>
+        <script>
+            var myBtn = document.getElementById("myBtn");
+           // alert(myBtn);
+            myBtn.addEventListener("click",function(){
+                alert("Button clicked");
+            })
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,155 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Javascript</title>
+        <script>
+            function validate()
+            {
+                var usernamestatus = usernamevalidate();
+                var emailstatus = emailvalidate();
+                var genderstatus = gendervalidate();
+                var subjectstatus = subjectvalidate();
+                var edisplay = document.getElementById("edisplay");
+                var gdisplay = document.getElementById("gdisplay");
+                var sdisplay = document.getElementById("sdisplay");
+                
+                if(usernamestatus===false)
+                {
+                    if(emailstatus==false)
+                        edisplay.innerHTML="*";
+                    if(genderstatus==false)
+                        gdisplay.innerHTML="*";
+                    if(subjectstatus==false)
+                        sdisplay.innerHTML="*";
+                    return false;
+                }
+                else if(emailstatus==false)
+                {
+                    if(genderstatus==false)
+                        gdisplay.innerHTML="*";
+                    if(subjectstatus==false)
+                        sdisplay.innerHTML="*";
+                    return false;
+                }
+                else if(genderstatus==false)
+                {
+                    if(subjectstatus==false)
+                        sdisplay.innerHTML="*";
+                    return false;
+                }
+                else if(subjectstatus==false)
+                    return false;
+            }
+            function usernamevalidate()
+            {
+                var username = document.getElementById("username");
+                var udisplay = document.getElementById("udisplay");
+                if(username.value.trim()=="")
+                {
+                    udisplay.innerHTML="Username Required";
+                    return false;
+                }
+                else
+                {
+                    udisplay.innerHTML="";
+                    return true;
+                }
+            }
+            function emailvalidate()
+            {
+                var email = document.getElementById("email");
+                var edisplay = document.getElementById("edisplay");
+                if(email.value.trim()=="")
+                {
+                    edisplay.innerHTML="Email Required";
+                    return false;
+                }
+                else
+                {
+                    edisplay.innerHTML="";
+                    return true;
+                }
+            }
+
+            function gendervalidate()
+            {
+                var male = document.getElementById("male");
+                var female = document.getElementById("female");
+                var gdisplay = document.getElementById("gdisplay");
+                if(male.checked==false && female.checked==false)
+                {
+                    gdisplay.innerHTML="Gender Required";
+                    return false;
+                }    
+                else
+                {
+                    gdisplay.innerHTML="";
+                    return true;
+                }
+            }
+            function subjectvalidate()
+            {
+                var subject = document.getElementById("subject");
+                var sdisplay = document.getElementById("sdisplay");
+                if(subject.selectedIndex==0)
+                {
+                    sdisplay.innerHTML="Subject Required";    
+                    return false;
+                }
+                else
+                {
+                    sdisplay.innerHTML="";
+                    return true;
+                }
+            }
+</script>
+</head>
+    <body>
+        <h1>Javascript Validation</h1>
+        <form action="welcome.html" onsubmit="return validate()">
+        <table>
+            <tr>
+                <td>Username</td>
+                <td>
+                    <input onkeyup="usernamevalidate()" type="text" placeholder="Enter Username" id="username">
+                    <span id="udisplay" style="color:red">*</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>
+                    <input onkeyup="emailvalidate()" type="email" placeholder="Enter Email" id="email">
+                    <span id="edisplay" style="color:red">*</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input onclick="gendervalidate()" type="radio" id="male" name="gender">Male
+                    <input onclick="gendervalidate()" type="radio" id="female" name="gender">Female
+                    <span id="gdisplay" style="color:red">*</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Subject</td>
+                <td>
+                    <select onchange="subjectvalidate()" id="subject">
+                        <option value="">Select Subject</option>
+                        <option value="C Language">C Language</option>
+                        <option value="C++ Language">C++ Language</option>
+                        <option value="Java Language">Java Language</option>
+                    </select>
+                    <span id="sdisplay" style="color:red">*</span>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+    </body>
+</html>

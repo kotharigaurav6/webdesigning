@@ -1,0 +1,88 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Javascript</title>
+        <script>
+            function validate()
+            {
+                var username = document.getElementById("username");
+                if(username.value.trim()=="")
+                {
+                    alert("Username Required");
+                    username.focus();
+                    return false;
+                }
+
+                var email = document.getElementById("email");
+                if(email.value.trim()=="")
+                {
+                    alert("Email Required");
+                    email.focus();
+                    return false;
+                }
+
+                var male = document.getElementById("male");
+                var female = document.getElementById("female");
+                if(male.checked==false && female.checked==false)
+                {
+                    alert("Gender Required");
+                    male.focus();
+                    return false;
+                }    
+
+                var subject = document.getElementById("subject");
+                if(subject.selectedIndex==0)
+                {
+                    alert("Subject Required");
+                    subject.focus();
+                    return false;
+                }
+
+            }
+        </script>
+</head>
+    <body>
+        <h1>Javascript Validation</h1>
+        <form action="welcome.html" onsubmit="return validate()">
+        <table>
+            <tr>
+                <td>Username</td>
+                <td>
+                    <input type="text" placeholder="Enter Username" id="username">
+                </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>
+                    <input type="email" placeholder="Enter Email" id="email">
+                </td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" id="male" name="gender">Male
+                    <input type="radio" id="female" name="gender">Female
+                </td>
+            </tr>
+            <tr>
+                <td>Subject</td>
+                <td>
+                    <select id="subject">
+                        <option value="">Select Subject</option>
+                        <option value="C Language">C Language</option>
+                        <option value="C++ Language">C++ Language</option>
+                        <option value="Java Language">Java Language</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+    </body>
+</html>

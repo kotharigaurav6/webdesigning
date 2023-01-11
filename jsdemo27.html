@@ -1,0 +1,32 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Javascript</title>
+        <script>
+            function down()
+            {
+                var demo1 = document.getElementById("demo1");
+                demo1.style.color="crimson";
+            }
+            function enter()
+            {
+                var demo2 = document.getElementById("demo2");
+                demo2.style.backgroundColor="orange";
+                demo2.style.color="white";
+            }
+            function over()
+            {
+                var demo3 = document.getElementById("demo3");
+                demo3.style.textTransform="uppercase";
+            }
+        </script> 
+</head>
+    <body>
+        <span id="demo1" onmousedown="down()">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, obcaecati?</span>
+        <br>
+        <span id="demo2" onmouseenter="enter()">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, obcaecati?</span>
+        <br>
+        <span id="demo3" onmouseover="over()">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, obcaecati?</span>
+    
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Javascript</title>
+        <style>
+            #outer{
+                height:200px;
+                border:2px solid red;
+                padding: 10px;
+                font-size: 40px;
+                background-color: green;
+            }
+            #inner{
+                height:50px;
+                border:2px solid red;
+                padding: 10px;
+                background-color: gray;
+            }
+        </style> 
+        <script>
+            function over()
+            {
+                document.getElementById("count").innerHTML++;
+            }
+            function enter()
+            {
+                document.getElementById("count1").innerHTML++;
+            }
+            function move()
+            {
+                document.getElementById("count2").innerHTML++;
+            }
+        </script>
+</head>
+    <body>
+        <div id="outer" onmouseover="over()">
+            <center><b>onmouseover
+                <span id="count">0</span>
+            </b></center>
+            <div id="inner"></div>
+        </div>
+        <br>
+        <div id="outer" onmouseenter="enter()">
+            <center><b>onmouseenter
+                <span id="count1">0</span>
+            </b></center>
+            <div id="inner"></div>
+        </div>
+        <br>
+        <div id="outer" onmousemove="move()">
+            <center><b>onmousemove
+                <span id="count2">0</span>
+            </b></center>
+            <div id="inner"></div>
+        </div>
+        <br>
+
+    </body>
+</html>

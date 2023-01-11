@@ -1,0 +1,18 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Javascript</title>
+        <script>
+            function myFun()
+            {
+                document.getElementById('show').innerHTML=Date();
+            }
+        </script> 
+</head>
+    <body>
+        <button onclick="document.getElementById('show').innerHTML=Date()">Button</button>
+        <button onclick="this.innerHTML=Date()">Button</button>
+        <button onclick="myFun()">Button</button>
+        <p id="show"></p>
+    </body>
+</html>

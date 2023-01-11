@@ -1,0 +1,25 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Javascript</title>
+        <script>
+            function focusDemo()
+            {
+                var ipt = document.getElementById("demo");
+                ipt.style.backgroundColor="wheat";
+                ipt.style.color="orange";
+            }
+            function blurDemo()
+            {
+                var ipt = document.getElementById("demo");
+                ipt.style.fontFamily="arial";
+                ipt.style.backgroundColor="orange";
+                ipt.style.color="white";
+            }
+            
+        </script>
+</head>
+    <body>
+        <input onfocus="focusDemo()" onblur="blurDemo()" type="text" placeholder="onblur | onfocus" id="demo">
+    </body>
+</html>
